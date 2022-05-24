@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>반복문 - for()</title>
+</head>
+<body>
+    <script>
+        //1부터 10까지 출력하고, 총합을 계산하는 프로그램
+        
+        let i = 0  //for문의 경우 해당 문장을 for() 맨 앞에 넣을 수도 있다.
+        let sumV = 0;
+
+        for(i= 1; i <= 10; i++){
+            sumV += i;
+            console.log("i=" + i +", sumV=" + sumV);
+        }
+        console.log("합계 : " + sumV);
+
+    </script>
+</body>
+</html>
