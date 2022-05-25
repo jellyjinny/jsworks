@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>지역변수의 유효 범위(scope)</title>
+</head>
+<body>
+    <h3>지역 변수의 유효 범위</h3>
+    <script>
+        //oneUp() 함수 정의
+        // 블록을 빠져나오면 소멸
+        function oneUp(){
+            let x = 1;   //지역 변수
+            x += 1;  //x++
+            return x;
+        }
+
+        /*let num = oneUp();  //1번 호출
+        document.write(num + '<br>'); */
+        
+        console.log(oneUp()); //2   위에서 값을 대입하고 계산 후 소멸
+        console.log(oneUp()); //2   so, 다음 식도 위에서는 소멸했기 때문에 값은 2.
+
+        //let x = 0;
+        document.write(x);
+    </script>
+</body>
+</html>
