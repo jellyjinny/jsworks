@@ -5,7 +5,7 @@ let winner = new Array(5); //당첨자 수 5명 배열 선언
 if(member == null){
     document.write("<p>입력이 취소되었습니다</p>");
 }
-
+else{  //member != null
 //발표
 document.write("<p>전체 응모자 수 : " + member + "명</P>")
 document.write("<p>당첨자 : ")
@@ -21,6 +21,11 @@ for(var i = 0; i < winner.length; i++){
         }
     }
 }
+/*
+
+    i=0, winner[0]
+
+*/
 
 //출력
 for(var i = 0; i < winner.length; i++){
