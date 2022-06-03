@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>checkbox 이벤트</title>
+    <script>
+        //checked 속성 사용
+        function check(){
+            document.getElementById("myCheck").checked = true;
+        }
+        //함수 이름은 대,소문자를 정확하게 구분해서 넣어주어야 한다.
+        function uncheck(){
+            document.getElementById("myCheck").checked = false;
+        }
+    </script>
+</head>
+<body>
+    <div>
+        Checkbox : <input type="checkbox" id="mycheck">
+        <button onclick="check()">Check Checkbox</button>
+        <button onclick="uncheck()">Uncheck Checkbox</button>
+    </div>
+</body>
+</html>
