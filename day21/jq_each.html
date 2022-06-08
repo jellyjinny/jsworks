@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>each() 함수</title>
+    <script src="./js/jquery-3.6.0.js"></script>
+    <script>
+        $(function(){
+           $("button").click(function(){
+               //each() 매개변수 없음
+               $("li").each(function(index, element){
+                    alert($(this).text());
+                    //console.log($(this).text());   
+               });
+
+               //each(index, element){}
+               $("li").each(function(index, element){
+                   console.log(index, element);
+               });
+           });
+        });
+    </script>
+</head>
+<body>
+    <button>알림창 실행</button>
+    <ul>
+        <li>Coffee</li>
+        <li>Milk</li>
+        <li>Tea</li>
+    </ul>
+</body>
+</html>
+
+<!-- 
+    .each() - 일치하는 각 요소에 대해 실행
+    .map() - 어떤 조건에 맞는 요소에 대해 실행
+    
+    배열 주요 함수 - map()
+    배열 내의 요소 각각에 대하여 주어진 함수를 호출한 결과를 모아 새로운 배열을 반환
+
+    배열의 복사
+    a1 = [1, 2, 3]
+    a2 = []  //빈배열
+    a2 = new Array(3)
+    a2 = a1
+
+ -->

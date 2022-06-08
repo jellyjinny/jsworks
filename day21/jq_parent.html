@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>parent() 함수</title>
+    <style>
+        .content{width: 800px; margin: 0 auto;}
+        .wrap *{  /* 지금까지는 ul, li 로 했던것을 wrap으로 하면 부모까지 태그가 적용된다 */
+            list-style: none;
+            display: block;  /* 이게 없으면 span이 하위가 아니라 옆으로 붙음  */
+            border: 2px solid #ddd;
+            margin: 15px;
+            padding: 10px;  
+        }
+    </style>
+    <script src="./js/jquery-3.6.0.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("span").parent().css({"color":"red", "border": "2px solid blue"})
+            $("ul > li").eq(1).css({"color":"red", "border": "2px solid red"})
+            //$("ul > li").has("span").next().css({"color":"red", "border": "2px solid red"})
+            //$("ul > li.a").next().css({"color":"red", "border": "2px solid red"})
+            
+        });
+    </script>
+</head>
+<body>
+    <div class="content">
+        <div class="wrap">
+            <ul>ul (grandparent)
+                <li>li (parent)
+                    <span>span</span> <!-- inline -->
+                </li>
+                <li>li</li>
+                <li>li</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
