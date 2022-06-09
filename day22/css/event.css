@@ -1,0 +1,16 @@
+* {margin: 0; padding: 0;}
+.pic {background: #ccc;}
+.pic img {
+    transform: translateX(-200px);  /* 왼쪽으로 -200PX만큼 숨겨둠 */
+    transition: all 0.5s ease;
+    vertical-align: top;   /* 수직 정렬 */
+}
+.pic img.on {transform: translateX(0);}
+button {
+    width: 200px;
+    height: 50px;
+    border: none;
+    background: #333;
+    color: #fff;
+    cursor: pointer;  /*마우스 가져다 대면 손모양으로 바뀌는 기능*/
+}

@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>서브 메뉴 만들기</title>
     <style>
-        .wrap .ul1{display: none;}
+        .wrap .ul1, .ul2{display: none;}
         .wrap a{text-decoration: none;}
     </style>
     <script src="./js/jquery-3.6.0.js"></script>
@@ -15,15 +15,34 @@
             //학교안내
             $(".btn1 a").on("mouseover", function(){
                 let a = $(this); //이벤트가 일어나는 대상
-                a.parent().next().show();
-                a.css("background", "pink");
-            })
+                a.parent().next().show(); //ul1 보임
+                a.css("background", "pink"); - 원형
+                //$(".ul1").css("display", "block");
+            });
+
             $(".btn1 a").on("mouseout", function(){
                 let a = $(this); //이벤트가 일어나는 대상
-                a.parent().next().hide();
+                a.parent().next().hide(); //ul1 숨김
                 a.css("background", "white");
-            })
+                //$(".ul1")..css("display", "none");
+            });
+
+            //학교생활
+            $(".btn2 a").on("click", function(){
+                //let a = $(this);
+                //a.parent().next().show(); 
+                $(".ul2").css("display", "block");
+            });
+
+            $(".btn1 a").on("mouseout", function(){
+                //let a = $(this);
+                //a.parent().next().show();
+                $(".ul2").css("display", "none");
+            });
+
         });
+
+
     </script>
 </head>
 <body>
@@ -35,6 +54,14 @@
             <li>학교장인사말</li>
             <li>학교연혁</li>
             <li>찾아오시는길</li>
+        </ul>
+        <p class="btn2">
+            <a href="#">학교생활</a>
+        </p>
+        <ul class="ul2">
+            <li>공지사항</li>
+            <li>가정통신문</li>
+            <li>동아리활동</li>
         </ul>
     </div>
 </body>
