@@ -1,11 +1,6 @@
-$(document).ready(function(){})
-//let isOver1 = false; //상위메뉴(마우스오버되면 : true/)
-//let isOver2 = false; //하위메뉴(마우스오버되면 : true/)
 
-let isOver1 = [false];
-let isOver2 = [false];
-
-
+var isOver1 = false;
+var isOver2 = false;
 function goHide1() {
 	if (!isOver1 && !isOver2) {
 		$('.gnb_depth2_1').stop().fadeOut('fast');
@@ -62,7 +57,7 @@ $(document).ready( function() {
 	});
 	$('.openAll1').mouseout(function(){
 		isOver1 = false;
-		setTimeout("goHide1()",1000);
+		setTimeout("goHide1()",200);
 	});	
 	$('.gnb_depth2_1 li:last-child a').blur(function(){
 		isOver1 = false;
@@ -174,7 +169,7 @@ $(document).ready( function() {
 	$('.gnb_depth2_4').blur(function(){
 		isOver2222 = false;
 		setTimeout("goHide4()",200);
-	});
+	});	
     
 	//모바일 메뉴 띄움
 	$('.openMOgnb').click(function(){

@@ -200,7 +200,6 @@ footer .foot_area .snslink li + li + li a {background-image:url(../img/ico_insta
 
 /* app_area */
 .appbbs_area {padding:60px 0;}
-.appbbs_area .appbbs_box {}
 .appbbs_box .app_line {float:left; width:66%; box-sizing:border-box; padding:45px 0; text-align:center; background:url(../img/bg_app.jpg) no-repeat; font-size:0;}
 .appbbs_box .app_line a {display:inline-block; width:42.4%; height:100px; line-height:100px; box-sizing:border-box; padding-left:75px; text-align:left; background:rgba(0,0,0,0.3) url(../img/ico_katalk.png) no-repeat 20px 50%; border:2px solid #fff; margin-right:10px; font-size:26px; color:#fff; vertical-align:middle;}
 .appbbs_box .app_line a + a {margin-right:0; padding-left:85px;background-image:url(../img/ico_phone.png);}
@@ -212,7 +211,6 @@ footer .foot_area .snslink li + li + li a {background-image:url(../img/ico_insta
 
 /* quick_list */
 .quick_area {position:fixed; top:171px; right:0; width:94px; z-index:100;}
-.quick_area .quick_list {}
 .quick_area .quick_list li {text-align:center; background:#282828; font-size:15px;}
 .quick_area .quick_list li a {display:block; padding:15px 0; border-top:1px solid #4d4d4d;}
 .quick_area .quick_list li:first-child a {border-top:none;}
